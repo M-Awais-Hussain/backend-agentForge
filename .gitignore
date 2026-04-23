@@ -2,6 +2,7 @@
 node_modules/
 myenv/
 myenv
+/myenv
 venv/
 env/
 .venv/
