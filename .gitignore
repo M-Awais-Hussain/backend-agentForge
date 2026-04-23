@@ -9,6 +9,9 @@ env/
 env/
 venv/
 
+tests/
+/tests/
+
 # Build outputs
 frontend/dist/
 frontend/dist-ssr/
