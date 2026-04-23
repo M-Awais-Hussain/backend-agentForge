@@ -1,24 +1,8 @@
 import os
 import shutil
-
-# Fix for GitPython "Bad git executable" issue on Windows
-if not shutil.which("git"):
-    common_git_paths = [
-        r"C:\Program Files\Git\cmd\git.exe",
-        r"C:\Program Files\Git\bin\git.exe",
-        r"C:\Program Files (x86)\Git\cmd\git.exe",
-        r"C:\Program Files (x86)\Git\bin\git.exe",
-    ]
-    for path in common_git_paths:
-        if os.path.exists(path):
-            os.environ["GIT_PYTHON_GIT_EXECUTABLE"] = path
-            break
-
-os.environ["GIT_PYTHON_REFRESH"] = "quiet"
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.api.routes import router
+from api.routes import router
 
 app = FastAPI(title="AgentForge — AI Developer Platform API")
 

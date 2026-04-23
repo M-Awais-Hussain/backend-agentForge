@@ -1,6 +1,6 @@
 from langchain_core.messages import HumanMessage, SystemMessage
-from backend.services.groq_client import get_llm
-from backend.services.ast_analyzer import analyze_complexity
+from services.groq_client import get_llm
+from services.ast_analyzer import analyze_complexity
 import difflib
 import logging
 import re

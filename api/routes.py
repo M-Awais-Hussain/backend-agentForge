@@ -2,8 +2,8 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import Optional, Dict, Any, List
 from sse_starlette.sse import EventSourceResponse
-from backend.graph.langgraph_flow import process_code, process_code_streaming
-from backend.api.event_emitter import EventEmitter
+from graph.langgraph_flow import process_code, process_code_streaming
+from api.event_emitter import EventEmitter
 import asyncio
 
 router = APIRouter()
